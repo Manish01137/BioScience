@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+@layer components {
+
+  /* ── Glassmorphism card ── */
+  .glass {
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1.5px solid rgba(255,255,255,0.6);
+    box-shadow: 0 8px 40px rgba(26,41,47,0.12);
+  }
+
+  /* ── Gold-teal gradient divider ── */
+  .brand-divider {
+    @apply block w-14 h-[3px] rounded-sm mx-auto mt-3 mb-7;
+    background: linear-gradient(90deg,#6B8E99,#C5A059);
+  }
+  .brand-divider-l {
+    @apply block w-14 h-[3px] rounded-sm mt-3 mb-7;
+    background: linear-gradient(90deg,#6B8E99,#C5A059);
+  }
+
+  /* ── Card with hover lift ── */
+  .card {
+    @apply bg-white rounded-2xl shadow-card transition-all duration-300;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(26,41,47,0.13);
+  }
+
+  /* ── Dark card (navy bg) ── */
+  .card-dark {
+    @apply rounded-2xl transition-all duration-300;
+    background: linear-gradient(135deg,#1A292F 0%,#243a41 100%);
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply bg-coral text-white font-body font-semibold inline-flex items-center gap-2
+           transition-all duration-300 no-underline;
+  }
+  .btn-primary:hover { background:#e05252; transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,107,107,0.35); }
+
+  .btn-outline {
+    @apply border-2 border-navy text-navy font-body font-semibold inline-flex items-center gap-2
+           transition-all duration-300 no-underline bg-transparent;
+  }
+  .btn-outline:hover { @apply bg-navy text-white; }
+
+  .btn-outline-white {
+    @apply border-2 border-white text-white font-body font-semibold inline-flex items-center gap-2
+           transition-all duration-300 no-underline bg-transparent;
+  }
+  .btn-outline-white:hover { @apply bg-white text-navy; }
+
+  /* ── Nav link ── */
+  .nav-link {
+    @apply font-body text-sm font-medium tracking-wide no-underline transition-colors duration-300;
+    color: rgba(255,255,255,0.85);
+  }
+  .nav-link:hover { color:#C5A059; }
+  .nav-link.active { color:#C5A059; }
+
+  /* ── Section tag (small eyebrow label) ── */
+  .sec-tag {
+    @apply font-body text-xs font-semibold tracking-[3.5px] uppercase text-b-teal;
+  }
+
+  /* ── Stat pill ── */
+  .stat-pill {
+    @apply bg-white rounded-2xl shadow-card px-6 py-5 text-center;
+  }
+
+  /* ── Form input ── */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white
+           font-body text-[15px] text-b-text outline-none
+           transition-colors duration-300 placeholder-gray-400;
+  }
+  .input:focus { @apply border-b-teal; box-shadow:0 0 0 3px rgba(107,142,153,0.15); }
+
+  /* ── Ingredient tag ── */
+  .ing-tag {
+    @apply font-body text-[13px] font-medium text-navy border border-b-teal/30
+           bg-alt-bg px-4 py-1.5 rounded-full inline-block;
+  }
+
+  /* ── Feature row item ── */
+  .feature-row {
+    @apply flex items-start gap-4 py-5;
+    border-bottom: 1px solid #eef1f2;
+  }
+  .feature-row:last-child { border-bottom: none; }
+
+  /* ── Coming soon badge ── */
+  .cs-badge {
+    @apply font-body text-[11px] font-bold uppercase tracking-[1.8px] text-navy px-5 py-2 rounded-full inline-block;
+    background: linear-gradient(135deg,#C5A059,#e8c879);
+  }
+
+}
+
+/* ── Navbar states ── */
+.nav-transparent {
+  background: linear-gradient(180deg,rgba(26,41,47,0.88) 0%,transparent 100%);
+}
+.nav-solid {
+  background: rgba(26,41,47,0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.2);
+}
+
+/* ── Page hero base ── */
+.page-hero {
+  background: linear-gradient(135deg,#1A292F 0%,#243a41 60%,#2e5462 100%);
+}
+
+/* ── Footer ── */
+.footer-bg {
+  background: linear-gradient(135deg,#0f1c21 0%,#1A292F 50%,#243a41 100%);
+}
+
+/* ── WhatsApp ── */
+.wa-btn {
+  background: #25D366;
+  animation: waPulse 2.8s ease-in-out infinite;
+}
+
+/* ── Keyframes ── */
+@keyframes waPulse {
+  0%,100% { box-shadow:0 4px 20px rgba(37,211,102,0.4); }
+  50%      { box-shadow:0 4px 32px rgba(37,211,102,0.65),0 0 0 8px rgba(37,211,102,0.1); }
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(22px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.fade-up { animation: fadeUp 0.65s ease forwards; }
+.fade-up-2 { animation: fadeUp 0.65s 0.15s ease both; }
+.fade-up-3 { animation: fadeUp 0.65s 0.3s ease both; }
+
+/* ── Decorative circle accent ── */
+.circle-accent {
+  @apply absolute rounded-full pointer-events-none;
+  background: rgba(107,142,153,0.08);
+}
+
+/* ── Horizontal rule with gradient ── */
+.hr-gold {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg,transparent,#C5A059,transparent);
+}
