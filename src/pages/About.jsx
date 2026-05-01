@@ -74,19 +74,22 @@ export default function About() {
               <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/5" />
               <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-gold/5" />
               <span className="font-body text-[11px] tracking-[3px] uppercase text-gold font-semibold block mb-5">
-                The Biospire Journey
+                The <strong>Biospire</strong> Journey
               </span>
-              <blockquote className="font-display text-[1.15rem] italic text-white/90 leading-[1.88] mb-6">
-                "Incorporated in June 2025, Biospire was founded on a shared commitment to
+              <blockquote className="font-display text-[1.15rem] italic text-white leading-[1.88] mb-6">
+                "Incorporated in June 2025, <strong className="not-italic font-bold">Biospire</strong> was founded on a shared commitment to
                 excellence and a deep respect for life. Our leadership brings together a diverse
                 range of expertise, united by a singular observation: that the pharmaceutical
                 landscape is ready for a more personalized, ethical approach to healthcare."
               </blockquote>
-              <p className="font-body text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <p className="font-body text-sm leading-[1.85]" style={{ color: 'rgba(255,255,255,0.85)' }}>
                 "With a foundational background in pharmaceutical marketing, we recognized the
                 critical gaps between laboratory innovation and the doctor's clinic. We saw that
                 healthcare professionals were searching for more than just a brand — they were
-                looking for precision formulations designed for real-world recovery."
+                looking for precision formulations and targeted absorption designed for real-world
+                recovery. We started <strong className="text-white">Biospire</strong> to be that
+                vital link, ensuring that every product we represent is backed by scientific
+                integrity and a passion for wellness."
               </p>
               <div className="w-12 h-0.5 bg-gold rounded mt-6" />
             </div>
@@ -123,13 +126,13 @@ export default function About() {
             ].map((m, i) => (
               <div key={i} className="rounded-2xl p-12 relative overflow-hidden" style={{ background: m.bg }}>
                 <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-white/5" />
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-white/15 flex items-center justify-center text-white mb-6">
                   {m.icon}
                 </div>
                 <span className="font-body text-[11px] tracking-[3px] uppercase text-gold font-semibold block mb-4">
                   {m.label}
                 </span>
-                <p className="font-display text-[1.2rem] italic text-white/92 leading-[1.85]">{m.text}</p>
+                <p className="font-display text-[1.2rem] italic text-white font-medium leading-[1.85]" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.25)' }}>{m.text}</p>
               </div>
             ))}
           </div>
@@ -173,19 +176,27 @@ export default function About() {
           <h2 className="font-display font-bold text-navy mb-4" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)' }}>
             From the Desk of the Directors
           </h2>
-          <blockquote
-            className="font-display italic text-navy leading-[1.9] max-w-3xl mx-auto mb-14 font-medium"
-            style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)' }}
-          >
-            "At Biospire, our work is fueled by a simple but profound belief: that healthcare is
-            most effective when it is guided by absolute integrity. We founded this company to bring
-            a fresh, professional perspective to the pharmaceutical landscape — one that prioritizes
-            the patient's journey above all else. By combining our diverse professional backgrounds,
-            we are dedicated to bridging the critical space between laboratory innovation and the
-            doctor's clinic. Our focus remains on the practical needs of the Indian market, ensuring
-            we provide healthcare professionals with the precise formulations required for the
-            long-term vitality and well-being of every citizen across Bharat."
-          </blockquote>
+          <div className="max-w-3xl mx-auto mb-14 text-left md:text-center">
+            <blockquote
+              className="font-display italic text-navy leading-[1.9] font-medium mb-6"
+              style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)' }}
+            >
+              "At <strong className="not-italic font-bold">Biospire</strong>, our work is fueled by a simple but profound belief: that healthcare
+              is most effective when it is guided by absolute integrity. We founded this company to
+              bring a fresh, professional perspective to the pharmaceutical landscape — one that
+              prioritizes the patient's journey above all else."
+            </blockquote>
+            <blockquote
+              className="font-display italic text-navy leading-[1.9] font-medium"
+              style={{ fontSize: 'clamp(1.1rem,2vw,1.3rem)' }}
+            >
+              "By combining our diverse professional backgrounds, <strong className="not-italic font-bold">we are dedicated to bridging the
+              critical space between laboratory innovation and the doctor's clinic.</strong> Our focus
+              remains on the practical needs of the Indian market, ensuring we provide healthcare
+              professionals with the precise formulations required for the long-term vitality and
+              well-being of every citizen across <strong className="not-italic font-bold">Bharat</strong>."
+            </blockquote>
+          </div>
 
           <div className="flex justify-center gap-20 flex-wrap">
             {['Shilpi Shrivastava', 'Priyanka Shrivastava'].map((name, i) => (

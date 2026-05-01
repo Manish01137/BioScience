@@ -51,7 +51,7 @@ export default function Partner() {
       <PageHero
         tag="Partner With Us"
         title="Building a Healthier Future Together"
-        subtitle="We are looking for partners who share our commitment to ethical healthcare and quality excellence — across every corner of Bharat."
+        subtitle={<>We are looking for partners who share our commitment to ethical healthcare and quality excellence — across every corner of <strong className="text-white font-bold">Bharat</strong>.</>}
       />
 
       {/* ─── INTRO ─── */}
@@ -68,7 +68,7 @@ export default function Partner() {
                 We are looking for partners who share our commitment to ethical healthcare and
                 quality excellence. Partner with a brand that values scientific integrity,
                 ethical transparency, and the shared goal of advancing patient-centric care
-                across Bharat.
+                across <strong className="text-navy">Bharat</strong>.
               </p>
               <p className="font-body text-base text-b-text leading-[1.88] mb-8">
                 At Biospire, we believe in growing together. Every partnership is a long-term

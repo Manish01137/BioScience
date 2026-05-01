@@ -5,45 +5,48 @@ import {
   FiPackage, FiArrowRight, FiCheckCircle, FiLink2
 } from 'react-icons/fi'
 
-const LEFT = [
+const PILLARS = [
   {
     icon: <FiActivity size={24} />,
     title: 'Superior Absorption Technology',
-    desc: 'We design formulations for maximum bioavailability, ensuring faster and more effective clinical results. Our Ferrous Bisglycinate-based iron therapy achieves significantly higher absorption than conventional ferrous sulphate.',
+    desc: 'We design formulations for maximum bioavailability, ensuring faster and more effective clinical results across our planned portfolio.',
     tag: 'Science-First',
+    grad: 'linear-gradient(135deg,#1A292F,#243a41)',
   },
   {
     icon: <FiSliders size={24} />,
     title: 'Balanced & Thoughtful Combinations',
     desc: 'Each ingredient is carefully selected to work in perfect synergy — no unnecessary overdosing, no shortcuts. Every combination is rationally designed for physiological harmony and patient safety.',
     tag: 'Precision Dosing',
+    grad: 'linear-gradient(135deg,#6B8E99,#4a6e78)',
   },
   {
     icon: <FiUserCheck size={24} />,
     title: 'Doctor-Centric Approach',
     desc: 'Built around real clinical needs — making prescriptions practical, effective, and reliable. Our field insights come directly from healthcare professionals who understand what patients actually need.',
     tag: 'Clinically Validated',
+    grad: 'linear-gradient(135deg,#1A292F,#243a41)',
   },
-]
-
-const RIGHT = [
   {
     icon: <FiAward size={24} />,
     title: 'Quality You Can Trust',
     desc: 'Manufactured in WHO-GMP certified facilities with strict quality and consistency checks. The Biospire seal is only applied after our own independent stability and efficacy review.',
     tag: 'WHO-GMP Certified',
+    grad: 'linear-gradient(135deg,#6B8E99,#4a6e78)',
   },
   {
     icon: <FiPackage size={24} />,
     title: 'Market-Ready Branding',
     desc: 'Strong premium packaging and compelling positioning that helps your products stand out and build trust faster in the competitive Indian pharmaceutical market.',
     tag: 'Premium Packaging',
+    grad: 'linear-gradient(135deg,#1A292F,#243a41)',
   },
   {
     icon: <FiLink2 size={24} />,
     title: 'Reliable Partnership',
     desc: 'Transparent business practices with consistent supply, proactive communication, and long-term support. We grow when you grow — that\'s what real partnership looks like.',
     tag: 'Long-Term Commitment',
+    grad: 'linear-gradient(135deg,#6B8E99,#4a6e78)',
   },
 ]
 
@@ -60,7 +63,7 @@ export default function WhyUs() {
       <PageHero
         tag="Why Choose Us"
         title="The Biospire Advantage"
-        subtitle="Six reasons why healthcare professionals across Bharat trust Biospire Lifesciences as their pharmaceutical partner."
+        subtitle="Six core pillars that define how Biospire Lifesciences plans to serve healthcare professionals across Bharat."
       />
 
       {/* ─── DIFFERENTIATOR STATS ─── */}
@@ -86,48 +89,24 @@ export default function WhyUs() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Left column */}
-            <div className="flex flex-col gap-6">
-              {LEFT.map((item, i) => (
-                <div key={i} className="card p-8 flex gap-5 items-start group">
-                  <div
-                    className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110"
-                    style={{ background: 'linear-gradient(135deg,#1A292F,#243a41)' }}
-                  >
-                    {item.icon}
-                  </div>
-                  <div>
-                    <span className="font-body text-[10px] font-bold tracking-[2px] uppercase text-b-teal block mb-1.5">
-                      {item.tag}
-                    </span>
-                    <h4 className="font-body font-bold text-navy text-base mb-2.5">{item.title}</h4>
-                    <p className="font-body text-sm text-meta leading-[1.75]">{item.desc}</p>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+            {PILLARS.map((item, i) => (
+              <div key={i} className="card p-8 flex flex-col group h-full">
+                <div
+                  className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center text-white mb-5 transition-all duration-300 group-hover:scale-110"
+                  style={{ background: item.grad }}
+                >
+                  {item.icon}
                 </div>
-              ))}
-            </div>
-
-            {/* Right column */}
-            <div className="flex flex-col gap-6">
-              {RIGHT.map((item, i) => (
-                <div key={i} className="card p-8 flex gap-5 items-start group">
-                  <div
-                    className="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110"
-                    style={{ background: 'linear-gradient(135deg,#6B8E99,#4a6e78)' }}
-                  >
-                    {item.icon}
-                  </div>
-                  <div>
-                    <span className="font-body text-[10px] font-bold tracking-[2px] uppercase text-b-teal block mb-1.5">
-                      {item.tag}
-                    </span>
-                    <h4 className="font-body font-bold text-navy text-base mb-2.5">{item.title}</h4>
-                    <p className="font-body text-sm text-meta leading-[1.75]">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                <span className="font-body text-[10px] font-bold tracking-[2px] uppercase text-b-teal block mb-2">
+                  {item.tag}
+                </span>
+                <h4 className="font-body font-bold text-navy text-base mb-3 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="font-body text-sm text-meta leading-[1.75]">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -30,7 +30,7 @@ const PACKAGING = [
   {
     icon: <FiSun size={24} />,
     title: 'Alu-Alu Cold Form Blister',
-    desc: 'Advanced aluminium-to-aluminium technology providing a 100% barrier against moisture, light, and oxygen — preserving every formulation exactly as designed.',
+    desc: 'Advanced aluminium-to-aluminium technology providing a 100% barrier against air, heat, light, and moisture — preserving every formulation exactly as designed.',
   },
   {
     icon: <FiPackage size={24} />,
@@ -58,7 +58,7 @@ export default function Quality() {
     <>
       <PageHero
         tag="Quality & Manufacturing"
-        title="Quality Without Compromise"
+        title="QUALITY WITHOUT COMPROMISE"
         subtitle="The integrity of a healthcare solution is defined long before it reaches the patient — and the Biospire seal is proof of that commitment."
       />
 
@@ -99,21 +99,28 @@ export default function Quality() {
               <FiShield size={32} />
             </div>
             <span className="font-body text-[11px] tracking-[3.5px] uppercase text-gold font-semibold block mb-5">
-              The Biospire Quality Guarantee
+              The <strong>Biospire</strong> Guarantee
             </span>
-            <blockquote
-              className="font-display italic text-white/90 leading-[1.95] mb-8"
-              style={{ fontSize: 'clamp(1.1rem,2vw,1.35rem)' }}
+            <div
+              className="font-display italic text-white leading-[1.95] mb-8 space-y-5 text-left md:text-center"
+              style={{ fontSize: 'clamp(1.05rem,2vw,1.3rem)' }}
             >
-              "While we partner with world-class WHO-GMP certified facilities for production,
-              the Biospire seal is only awarded after our own rigorous stability and efficacy
-              checks. Our commitment is to ensure that every formulation we introduce in Bharat
-              is backed by scientific integrity and consistent quality. If a formulation does
-              not meet our strict criteria for stability and clinical efficacy, we return to the
-              research phase until the standard is perfected. We ensure uncompromising
-              batch-to-batch consistency — this commitment to reliability is the foundation
-              upon which healthcare professionals can build their trust in our seal."
-            </blockquote>
+              <p>
+                "While we partner with world-class WHO-GMP certified facilities for production,
+                the <strong className="not-italic font-bold">Biospire</strong> seal is only awarded
+                after our own rigorous stability and efficacy checks. Our commitment is to ensure
+                that every formulation we introduce in <strong className="not-italic font-bold">Bharat</strong>
+                {' '}is backed by scientific integrity and consistent quality."
+              </p>
+              <p>
+                "If a formulation does not meet our strict criteria for stability and clinical
+                efficacy, we return to the research phase until the standard is perfected. We ensure
+                uncompromising batch-to-batch consistency, maintaining the same high quality from
+                our very first launch to every subsequent supply. <strong className="not-italic font-bold">This
+                commitment to reliability is the foundation upon which healthcare professionals
+                can build their trust in our seal.</strong>"
+              </p>
+            </div>
             <div className="w-16 h-0.5 bg-gold rounded mx-auto" />
           </div>
         </div>
@@ -180,7 +187,7 @@ export default function Quality() {
         <div className="max-w-2xl mx-auto text-center">
           <FiCheckCircle size={36} className="text-b-teal mx-auto mb-4" />
           <p className="font-display italic text-navy font-semibold mb-6" style={{ fontSize: 'clamp(1.2rem,2vw,1.6rem)' }}>
-            Quality you can trust — delivered to every clinic and pharmacy across Bharat.
+            Quality you can trust — delivered to every clinic and pharmacy across <strong className="not-italic font-bold">Bharat</strong>.
           </p>
           <Link to="/partner" className="btn-primary px-9 py-4 rounded-lg text-sm font-bold">
             Partner With Us <FiArrowRight />

@@ -26,15 +26,16 @@ const BENEFITS = [
 const PIPELINE = [
   {
     title: 'Bone Health',
-    desc: 'Advanced calcium & vitamin D3 formulation for long-term skeletal support — targeting India\'s growing osteoporosis burden.',
+    desc: 'A premium Calcium + Vitamin D3 formulation thoughtfully crafted to support everyday bone wellness and help maintain normal bone strength. Enriched with essential nutrients to complement daily nutritional requirements and promote overall skeletal health as part of a balanced lifestyle.',
     status: 'In Pipeline',
     icon: <FiPackage size={22} />,
   },
   {
     title: 'Metabolic Wellness',
-    desc: 'A multi-micronutrient complex targeting metabolic syndrome, insulin sensitivity and cellular energy production.',
+    desc: 'Advanced metabolic support formulated with essential co-factors to support healthy glucose metabolism, optimize cellular energy production, and maintain metabolic balance.',
     status: 'In Pipeline',
     icon: <FiActivity size={22} />,
+    italic: true,
   },
 ]
 
@@ -42,21 +43,23 @@ export default function Portfolio() {
   return (
     <>
       <PageHero
-        tag="Product Portfolio"
-        title="Precision & Efficacy"
+        tag="Our Range"
+        title="Product Portfolio"
         subtitle="Every milligram is designed for optimal bioavailability — formulations that work as hard as the professionals who prescribe them."
       />
 
       {/* ─── INTRO ─── */}
       <section className="bg-body-bg py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <span className="sec-tag">Our Approach</span>
           <span className="brand-divider" />
-          <p className="font-body text-base text-b-text max-w-3xl mx-auto leading-[1.88]">
-            We translate nutritional science and field insights into specialized wellness solutions.
-            Our portfolio is intentionally focused on high-performance formulations that prioritize
-            targeted absorption and physiological harmony. We curate and validate precision-led
-            formulations healthcare professionals trust to support long-term vitality.
+          <h2 className="font-display font-bold text-navy mb-5" style={{ fontSize: 'clamp(1.8rem,3vw,2.4rem)' }}>
+            Precision &amp; Efficacy
+          </h2>
+          <p className="font-body text-base text-b-text leading-[1.88]">
+            We <strong className="text-navy">curate and validate</strong> the precision-led
+            formulations healthcare professionals trust to support long-term vitality, ensuring
+            that every milligram is designed for optimal bioavailability.
           </p>
         </div>
       </section>
@@ -70,7 +73,16 @@ export default function Portfolio() {
             <p className="font-body text-sm text-meta">Currently in final stages of certified production &amp; trademarking</p>
           </div>
 
-          <div className="bg-white rounded-3xl overflow-hidden shadow-card-lg">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-card-lg relative">
+            {/* Coming Soon ribbon */}
+            <div className="absolute top-5 right-5 z-20 flex items-center gap-2 px-4 py-2 rounded-full shadow-lg"
+              style={{ background: 'linear-gradient(135deg,#C5A059,#e8c879)' }}>
+              <FiClock size={13} className="text-navy" />
+              <span className="font-body text-[10px] font-bold tracking-[2px] uppercase text-navy">
+                Coming Soon
+              </span>
+            </div>
+
             {/* Header */}
             <div className="relative px-10 md:px-16 py-14 overflow-hidden"
               style={{ background: 'linear-gradient(135deg,#1A292F 0%,#243a41 60%,#2e5462 100%)' }}>
@@ -110,10 +122,10 @@ export default function Portfolio() {
                 <div className="border border-gray-100 rounded-xl overflow-hidden">
                   {INGREDIENTS.map((ing, i) => (
                     <div key={i}
-                      className="flex items-center justify-between px-5 py-3.5"
+                      className="grid grid-cols-1 sm:grid-cols-[1.1fr_1fr] gap-1 sm:gap-6 sm:items-center px-5 py-4"
                       style={{ background: i % 2 === 0 ? '#F8FAFB' : 'white', borderBottom: i < INGREDIENTS.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
                       <span className="font-body font-semibold text-navy text-sm">{ing.name}</span>
-                      <span className="font-body text-xs text-meta">{ing.role}</span>
+                      <span className="font-body text-xs text-meta sm:text-right">{ing.role}</span>
                     </div>
                   ))}
                 </div>
@@ -166,20 +178,31 @@ export default function Portfolio() {
               Future Horizons
             </h2>
             <p className="font-body text-base text-meta mt-4 max-w-2xl mx-auto leading-relaxed">
-              Our development pipeline is driven by a rigorous selection process. Every new addition
-              must meet the Biospire standard of precision and patient-centric care.
+              Our development pipeline is driven by a rigorous selection process. We are currently
+              finalizing specialized formulations in <strong className="text-navy">Bone Health</strong>
+              {' '}and <strong className="text-navy">Metabolic Wellness</strong>, ensuring every new
+              addition meets the <strong className="text-navy">Biospire</strong> standard of precision
+              and patient-centric care.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-4xl mx-auto">
             {PIPELINE.map((p, i) => (
-              <div key={i} className="card-dark p-9 relative overflow-hidden">
-                <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-white/5" />
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white mb-5">
+              <div
+                key={i}
+                className="card p-9 relative overflow-hidden flex flex-col"
+                style={{ borderTop: '3px solid #6B8E99' }}
+              >
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-5"
+                  style={{ background: 'linear-gradient(135deg,#1A292F,#243a41)' }}>
                   {p.icon}
                 </div>
-                <h4 className="font-display text-[1.5rem] font-bold text-white mb-3">{p.title}</h4>
-                <p className="font-body text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.7)' }}>{p.desc}</p>
-                <span className="cs-badge">{p.status}</span>
+                <h4 className="font-display text-[1.5rem] font-bold text-navy mb-3">{p.title}</h4>
+                <p
+                  className={`font-body text-sm leading-[1.8] text-b-text mb-6 flex-1 ${p.italic ? 'italic' : ''}`}
+                >
+                  {p.desc}
+                </p>
+                <span className="cs-badge self-start">{p.status}</span>
               </div>
             ))}
           </div>

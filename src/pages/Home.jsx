@@ -11,23 +11,20 @@ const PROMISES = [
     icon: <FiShield size={28} />,
     for: 'To Doctors',
     quote: '"A promise of trust"',
-    desc: 'Precision formulations backed by science — prescribed with absolute confidence, every time.',
     accent: '#1A292F',
     border: '#1A292F',
   },
   {
     icon: <FiUsers size={28} />,
     for: 'To Pharmacists',
-    quote: '"Reliability in every batch"',
-    desc: 'Consistent supply, premium packaging, and WHO-GMP compliance your pharmacy can stake its reputation on.',
+    quote: '"Reliability"',
     accent: '#6B8E99',
     border: '#6B8E99',
   },
   {
     icon: <FiHeart size={28} />,
     for: 'To Patients',
-    quote: '"Hope and healing"',
-    desc: 'At the heart of every formulation is a family placing trust in science, quality, and a better tomorrow.',
+    quote: '"Hope"',
     accent: '#C5A059',
     border: '#C5A059',
   },
@@ -124,9 +121,7 @@ export default function Home() {
                 "Partner in Progressive Healthcare…"
               </p>
               <p className="font-body text-base text-b-text leading-[1.85] mb-8">
-                A vibrant pharmaceutical marketing startup driven by one goal: delivering quality
-                healthcare solutions that bridge the gap between precision formulations and
-                real-world patient needs across <strong className="text-navy">Bharat</strong>.
+                Guided by our philosophy, <em className="text-navy font-semibold not-italic">"Partner in Progressive Healthcare…"</em> we focus on bridging the gap between quality formulations and real-world patient needs — delivering thoughtfully designed combinations that improve outcomes and support healthcare professionals across <strong className="text-navy">Bharat</strong>.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/portfolio" className="btn-primary px-7 py-3.5 rounded-lg text-sm font-bold tracking-wide">
@@ -180,9 +175,12 @@ export default function Home() {
           {/* Promise heading */}
           <div className="text-center mb-10">
             <h3 className="font-display font-bold text-navy" style={{ fontSize: 'clamp(1.7rem,2.8vw,2.3rem)' }}>
-              The Biospire Promise
+              The <strong>Biospire</strong> Promise
             </h3>
-            <p className="font-body text-meta mt-2">We believe every product carries a promise.</p>
+            <p className="font-body text-meta mt-2 max-w-2xl mx-auto leading-relaxed">
+              We believe every product carries a promise — a promise of trust to doctors,
+              reliability to pharmacists, and hope to patients.
+            </p>
           </div>
 
           {/* 3 promise cards */}
@@ -190,7 +188,7 @@ export default function Home() {
             {PROMISES.map((p, i) => (
               <div
                 key={i}
-                className="card flex flex-col items-center text-center p-8"
+                className="card flex flex-col items-center text-center p-10"
                 style={{ borderTop: `3px solid ${p.border}` }}
               >
                 <div
@@ -202,11 +200,10 @@ export default function Home() {
                 <span className="font-body text-[11px] font-semibold tracking-[2px] uppercase text-meta block mb-3">
                   {p.for}
                 </span>
-                <p className="font-display text-[1.3rem] italic font-semibold leading-snug mb-3"
+                <p className="font-display text-[1.3rem] italic font-semibold leading-snug"
                   style={{ color: p.accent }}>
                   {p.quote}
                 </p>
-                <p className="font-body text-sm text-meta leading-[1.75]">{p.desc}</p>
               </div>
             ))}
           </div>
