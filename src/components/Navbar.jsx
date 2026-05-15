@@ -9,6 +9,7 @@ const LINKS = [
   { label: 'Quality',   to: '/quality'   },
   { label: 'Why Us',    to: '/why-us'    },
   { label: 'Partner',   to: '/partner'   },
+  { label: 'Blog',      to: '/blog'      },
   { label: 'Contact',   to: '/contact'   },
 ]
 
