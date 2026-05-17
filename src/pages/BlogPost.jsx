@@ -167,6 +167,7 @@ export default function BlogPost() {
         tag={`Blog ${blog.number} · ${blog.category} · ${blog.readTime}`}
         title={blog.title}
         subtitle={blog.subtitle}
+        image="/Blog.jpg"
       />
 
       {/* ─── ARTICLE BODY ─── */}

@@ -10,7 +10,7 @@ const CONTACT_DETAILS = [
   {
     icon: <FiMapPin size={22} />,
     label: 'Registered Office',
-    value: '[Your Full Office Address], Nagpur, Maharashtra, India.',
+    value: 'Flat No 407, Tejomaya Astral Apartment, Wagdhara, Hingna, Nagpur - 441110, Maharashtra.',
     href: null,
     color: '#1A292F',
   },
@@ -24,8 +24,8 @@ const CONTACT_DETAILS = [
   {
     icon: <FiPhone size={22} />,
     label: 'Contact Number',
-    value: '+91 97307 75907',
-    href: 'tel:+919730775907',
+    value: '+91 74598 13299',
+    href: 'tel:+917459813299',
     color: '#C5A059',
   },
   {
@@ -61,6 +61,7 @@ export default function Contact() {
         tag="Get In Touch"
         title="Contact Our Corporate Office"
         subtitle="Whether you're a distributor, healthcare professional, or simply curious — we'd love to hear from you."
+        image="/ContactAboutUs.jpg"
       />
 
       {/* ─── REASON TO REACH OUT ─── */}
@@ -285,7 +286,7 @@ export default function Contact() {
           <div className="flex flex-wrap gap-8">
             <div>
               <p className="font-body text-[10px] tracking-[1.5px] uppercase text-white/40 mb-1">Location</p>
-              <p className="font-body text-sm text-white/75">Nagpur, Maharashtra, India</p>
+              <p className="font-body text-sm text-white/75">Flat No 407, Tejomaya Astral Apartment, Wagdhara, Hingna, Nagpur - 441110, Maharashtra</p>
             </div>
             <div>
               <p className="font-body text-[10px] tracking-[1.5px] uppercase text-white/40 mb-1">Email</p>
@@ -295,8 +296,8 @@ export default function Contact() {
             </div>
             <div>
               <p className="font-body text-[10px] tracking-[1.5px] uppercase text-white/40 mb-1">Phone</p>
-              <a href="tel:+919730775907" className="font-body text-sm text-white/75 no-underline">
-                +91 97307 75907
+              <a href="tel:+917459813299" className="font-body text-sm text-white/75 no-underline">
+                +91 74598 13299
               </a>
             </div>
           </div>

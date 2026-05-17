@@ -4,7 +4,7 @@ import {
   FiCheckCircle, FiAward, FiActivity, FiTrendingUp
 } from 'react-icons/fi'
 
-const HERO_IMG = 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1920&auto=format&fit=crop'
+const HERO_IMG = '/Homepage.jpg'
 
 const PROMISES = [
   {

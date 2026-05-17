@@ -46,6 +46,7 @@ export default function Portfolio() {
         tag="Our Range"
         title="Product Portfolio"
         subtitle="Every milligram is designed for optimal bioavailability — formulations that work as hard as the professionals who prescribe them."
+        image="/Portfolio.jpg"
       />
 
       {/* ─── INTRO ─── */}
@@ -87,9 +88,9 @@ export default function Portfolio() {
             <div className="relative px-10 md:px-16 py-14 overflow-hidden"
               style={{ background: 'linear-gradient(135deg,#1A292F 0%,#243a41 60%,#2e5462 100%)' }}>
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1200&auto=format&fit=crop"
+                src="/LovhaCommingSoon.jpg"
                 alt="LOHIVA hematinic formula"
-                className="absolute inset-0 w-full h-full object-cover opacity-[0.08]"
+                className="absolute inset-0 w-full h-full object-cover opacity-25"
               />
               <div className="relative z-10">
                 <div className="inline-block px-6 py-3 mb-6"

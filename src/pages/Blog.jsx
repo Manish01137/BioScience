@@ -10,6 +10,7 @@ export default function Blog() {
         tag="Insights & Education"
         title="Biospire Blog"
         subtitle="Evidence-based perspectives on iron supplementation — absorption, bioavailability, tolerability, and the science of formulations that actually work."
+        image="/Blog.jpg"
       />
 
       {/* ─── INTRO ─── */}

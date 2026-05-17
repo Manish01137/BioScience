@@ -52,6 +52,7 @@ export default function Partner() {
         tag="Partner With Us"
         title="Building a Healthier Future Together"
         subtitle={<>We are looking for partners who share our commitment to ethical healthcare and quality excellence — across every corner of <strong className="text-white font-bold">Bharat</strong>.</>}
+        image="/PartnerWithUS.jpg"
       />
 
       {/* ─── INTRO ─── */}

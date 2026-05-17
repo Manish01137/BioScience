@@ -80,7 +80,7 @@ export default function Footer() {
               <div className="flex gap-3 items-start">
                 <FiMapPin className="text-b-teal mt-0.5 flex-shrink-0" size={15} />
                 <p className="font-body text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.62)' }}>
-                  Nagpur, Maharashtra, India
+                  Flat No 407, Tejomaya Astral Apartment, Wagdhara, Hingna, Nagpur - 441110, Maharashtra
                 </p>
               </div>
               <div className="flex gap-3 items-center">
@@ -91,8 +91,8 @@ export default function Footer() {
               </div>
               <div className="flex gap-3 items-center">
                 <FiPhone className="text-b-teal flex-shrink-0" size={15} />
-                <a href="tel:+919730775907" className="font-body text-sm no-underline hover:text-b-teal transition-colors" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                  +91 97307 75907
+                <a href="tel:+917459813299" className="font-body text-sm no-underline hover:text-b-teal transition-colors" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  +91 74598 13299
                 </a>
               </div>
             </div>

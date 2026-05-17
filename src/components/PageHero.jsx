@@ -1,9 +1,33 @@
-export default function PageHero({ tag, title, subtitle, bg }) {
+export default function PageHero({ tag, title, subtitle, bg, image }) {
   return (
     <section
       className="relative overflow-hidden pt-36 pb-20 px-6"
       style={{ background: bg || 'linear-gradient(135deg,#1A292F 0%,#243a41 60%,#2e5462 100%)' }}
     >
+      {/* Background image */}
+      {image && (
+        <>
+          <img
+            src={image}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Premium dark overlay for text legibility */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(135deg,rgba(16,26,30,0.92) 0%,rgba(26,41,47,0.82) 55%,rgba(46,84,98,0.78) 100%)',
+            }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'radial-gradient(ellipse at center,transparent 0%,rgba(16,26,30,0.55) 100%)' }}
+          />
+        </>
+      )}
+
       {/* Decorative circles */}
       <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full"
         style={{ background: 'rgba(107,142,153,0.08)' }} />
@@ -28,7 +52,7 @@ export default function PageHero({ tag, title, subtitle, bg }) {
         </h1>
         {subtitle && (
           <p className="font-body text-base mt-5 max-w-xl mx-auto leading-relaxed"
-            style={{ color: 'rgba(255,255,255,0.72)' }}>
+            style={{ color: 'rgba(255,255,255,0.78)' }}>
             {subtitle}
           </p>
         )}

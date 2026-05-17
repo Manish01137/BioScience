@@ -60,6 +60,7 @@ export default function Quality() {
         tag="Quality & Manufacturing"
         title="QUALITY WITHOUT COMPROMISE"
         subtitle="The integrity of a healthcare solution is defined long before it reaches the patient — and the Biospire seal is proof of that commitment."
+        image="/quality.jpeg"
       />
 
       {/* ─── COMPLIANCE CERTS ─── */}

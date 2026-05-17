@@ -64,6 +64,7 @@ export default function WhyUs() {
         tag="Why Choose Us"
         title="The Biospire Advantage"
         subtitle="Six core pillars that define how Biospire Lifesciences plans to serve healthcare professionals across Bharat."
+        image="/WhyChooseUs.jpg"
       />
 
       {/* ─── DIFFERENTIATOR STATS ─── */}

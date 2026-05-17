@@ -39,6 +39,7 @@ export default function About() {
         tag="About Us"
         title="A Higher Standard of Care"
         subtitle="We harmonize advanced scientific formulations with the practical healthcare requirements of the Indian market."
+        image="/ContactAboutUs.jpg"
       />
 
       {/* ─── INTRO TWO-COL ─── */}
