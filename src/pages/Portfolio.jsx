@@ -69,7 +69,7 @@ export default function Portfolio() {
       <section className="bg-alt-bg py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <span className="sec-tag">Upcoming Formulation</span>
+            <span className="sec-tag">Now Initiating Market Circulation</span>
             <span className="brand-divider" />
             <p className="font-body text-sm text-meta">Currently in final stages of certified production &amp; trademarking</p>
           </div>
@@ -90,8 +90,10 @@ export default function Portfolio() {
               <img
                 src="/LovhaCommingSoon.jpg"
                 alt="LOHIVA hematinic formula"
-                className="absolute inset-0 w-full h-full object-cover opacity-25"
+                className="absolute inset-0 w-full h-full object-cover opacity-40"
               />
+              <div className="absolute inset-0"
+                style={{ background: 'linear-gradient(135deg,rgba(16,26,30,0.55) 0%,rgba(26,41,47,0.45) 100%)' }} />
               <div className="relative z-10">
                 <div className="inline-block px-6 py-3 mb-6"
                   style={{ background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(197,160,89,0.4)', borderRadius: '4px' }}>

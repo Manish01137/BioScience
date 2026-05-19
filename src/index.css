@@ -108,7 +108,10 @@ html { scroll-behavior: smooth; }
 
 /* ── Navbar states ── */
 .nav-transparent {
-  background: linear-gradient(180deg,rgba(26,41,47,0.88) 0%,transparent 100%);
+  background: rgba(26,41,47,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.18);
 }
 .nav-solid {
   background: rgba(26,41,47,0.97);
